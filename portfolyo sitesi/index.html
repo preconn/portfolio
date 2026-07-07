@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selin Ateş — Web Tasarımcı &amp; Front-End Geliştirici</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700;900&family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Yükleme ekranı -->
+    <div class="loader" id="loader">
+        <div class="loader-flame">
+            <span class="ember e1"></span>
+            <span class="ember e2"></span>
+            <span class="ember e3"></span>
+        </div>
+        <p class="loader-text">ATEŞ<span class="dot">.</span></p>
+    </div>
+
+    <!-- Özel imleç -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- Kıvılcım tuvali (arka plan parçacıkları) -->
+    <canvas id="emberCanvas"></canvas>
+
+    <!-- Gezinme -->
+    <nav class="navbar" id="navbar">
+        <a href="#hero" class="nav-logo">SELİN<span>ATEŞ</span></a>
+        <button class="nav-toggle" id="navToggle" aria-label="Menüyü aç/kapat">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#hero" class="nav-link active-link">Anasayfa</a></li>
+            <li><a href="#hakkimda" class="nav-link">Hakkımda</a></li>
+            <li><a href="#yetenekler" class="nav-link">Yetenekler</a></li>
+            <li><a href="#projeler" class="nav-link">Projeler</a></li>
+            <li><a href="#deneyim" class="nav-link">Deneyim</a></li>
+            <li><a href="#iletisim" class="nav-link nav-cta">İletişim</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="hero" id="hero">
+            <div class="hero-noise"></div>
+            <p class="hero-eyebrow reveal-up">KIVILCIMDAN ALEVLERE</p>
+            <h1 class="hero-title">
+                <span class="flicker" data-text="SELİN">SELİN</span>
+                <span class="flicker flicker-delay" data-text="ATEŞ">ATEŞ</span>
+            </h1>
+            <p class="hero-role reveal-up delay-1">Web Tasarımcı &amp; Front-End Geliştirici</p>
+            <p class="hero-desc reveal-up delay-2">Fikirlerin koda, kodun deneyime dönüştüğü yerde çalışıyorum. Her proje, küçük bir kıvılcımla başlar.</p>
+            <div class="hero-actions reveal-up delay-3">
+                <a href="#projeler" class="btn btn-primary">Projelerimi Gör</a>
+                <a href="#iletisim" class="btn btn-outline">İletişime Geç</a>
+            </div>
+            <div class="scroll-cue">
+                <span>AŞAĞI KAYDIR</span>
+                <div class="scroll-line"><i></i></div>
+            </div>
+        </section>
+
+        <!-- HAKKIMDA -->
+        <section class="about" id="hakkimda">
+            <div class="section-head reveal-up">
+                <p class="eyebrow">// Hakkımda</p>
+                <h2>Ateş her zaman<br>bir kıvılcımla başlar.</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-visual reveal-left">
+                    <div class="visual-frame">
+                        <div class="visual-glow"></div>
+                        <div class="visual-initials">SA</div>
+                        <div class="visual-ring"></div>
+                    </div>
+                </div>
+                <div class="about-content reveal-right">
+                    <p>Merhaba, ben Selin Ateş. Grafik tasarım ve yazılım bilgimi bir araya getirerek markalar için modern, kullanıcı odaklı dijital deneyimler tasarlıyorum.</p>
+                    <p>Marka kimliği, sosyal medya, web tasarımı, HTML/CSS ve yapay zekâ destekli üretim süreçlerinde çalışıyor; estetik ile işlevselliği bir arada sunan çözümler geliştiriyorum. Her projede amacım, markaların dijital dünyada güçlü ve kalıcı bir iz bırakmasını sağlamak.</p>
+                    <div class="about-stats">
+                        <div class="stat-box">
+                            <span class="stat-num" data-count="90+">0</span>
+                            <span class="stat-label">Tamamlanan Proje</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-num" data-count="6">0</span>
+                            <span class="stat-label">Yıllık Deneyim</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-num" data-count="27">0</span>
+                            <span class="stat-label">Mutlu Müşteri</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-num" data-count="1000+">0</span>
+                            <span class="stat-label">Fincan Kahve ☕</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- YETENEKLER -->
+        <section class="skills" id="yetenekler">
+            <div class="section-head reveal-up">
+                <p class="eyebrow">// Yetenekler</p>
+                <h2>Elimdeki malzemeler.</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-bars reveal-left">
+                    <div class="skill-item">
+                        <div class="skill-top"><span>HTML &amp; CSS</span><span class="skill-pct">25%</span></div>
+                        <div class="skill-track"><div class="skill-fill" data-width="25"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-top"><span>JavaScript</span><span class="skill-pct">25%</span></div>
+                        <div class="skill-track"><div class="skill-fill" data-width="25"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-top"><span>React</span><span class="skill-pct">20%</span></div>
+                        <div class="skill-track"><div class="skill-fill" data-width="20"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-top"><span>UI / UX Tasarım</span><span class="skill-pct">70%</span></div>
+                        <div class="skill-track"><div class="skill-fill" data-width="70"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-top"><span>Figma</span><span class="skill-pct">85%</span></div>
+                        <div class="skill-track"><div class="skill-fill" data-width="85"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-top"><span>Adobe Photoshop</span><span class="skill-pct">90%</span></div>
+                        <div class="skill-track"><div class="skill-fill" data-width="90"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-top"><span>Adobe Illustrator</span><span class="skill-pct">90%</span></div>
+                        <div class="skill-track"><div class="skill-fill" data-width="90"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-top"><span>Adobe Indesign</span><span class="skill-pct">90%</span></div>
+                        <div class="skill-track"><div class="skill-fill" data-width="90"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-top"><span>Adobe Premiere Pro</span><span class="skill-pct">70%</span></div>
+                        <div class="skill-track"><div class="skill-fill" data-width="70"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-top"><span>Adobe After Effect</span><span class="skill-pct">40%</span></div>
+                        <div class="skill-track"><div class="skill-fill" data-width="40"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-top"><span>Corel Draw</span><span class="skill-pct">90%</span></div>
+                        <div class="skill-track"><div class="skill-fill" data-width="90"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-top"><span>Blender</span><span class="skill-pct">30%</span></div>
+                        <div class="skill-track"><div class="skill-fill" data-width="30"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-top"><span>Sketch Up</span><span class="skill-pct">40%</span></div>
+                        <div class="skill-track"><div class="skill-fill" data-width="40"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-top"><span>AutoCAD</span><span class="skill-pct">20%</span></div>
+                        <div class="skill-track"><div class="skill-fill" data-width="20"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-top"><span>Wordpress</span><span class="skill-pct">50%</span></div>
+                        <div class="skill-track"><div class="skill-fill" data-width="50"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-top"><span>Meta Business Suite</span><span class="skill-pct">90%</span></div>
+                        <div class="skill-track"><div class="skill-fill" data-width="90"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-top"><span>Procreate</span><span class="skill-pct">90%</span></div>
+                        <div class="skill-track"><div class="skill-fill" data-width="90"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-top"><span>Figma</span><span class="skill-pct">50%</span></div>
+                        <div class="skill-track"><div class="skill-fill" data-width="50"></div></div>
+                    </div>
+                </div>
+                <div class="skill-cards reveal-right">
+                    <div class="mini-card">
+                        <span class="mini-icon">◆</span>
+                        <h3>Duyarlı Tasarım</h3>
+                        <p>Her ekran boyutunda kusursuz görünen arayüzler.</p>
+                    </div>
+                    <div class="mini-card">
+                        <span class="mini-icon">◆</span>
+                        <h3>Grafik Tasarım</h3>
+                        <p>Estetik, işlevsellik ve marka kimliğini bir araya getiren yaratıcı tasarım çözümleri.</p>
+                    </div>
+                    <div class="mini-card">
+                        <span class="mini-icon">◆</span>
+                        <h3>Dijital Deneyim</h3>
+                        <p>Tasarım, teknoloji ve kullanıcı deneyimini buluşturan yenilikçi yaklaşımlar.</p>
+                    </div>
+                    <div class="mini-card">
+                        <span class="mini-icon">◆</span>
+                        <h3>Yapay Zekâ Destekli Üretim</h3>
+                        <p>Yaratıcı süreçleri hızlandıran ve verimliliği artıran yapay zekâ destekli çözümler.</p>
+                    </div>
+                    <div class="mini-card">
+                        <span class="mini-icon">◆</span>
+                        <h3>Web Tasarımı</h3>
+                        <p>Modern, kullanıcı odaklı ve tüm cihazlarla uyumlu dijital arayüzler.</p>
+                    </div>
+                    <div class="mini-card">
+                        <span class="mini-icon">▲</span>
+                        <h3>Animasyon</h3>
+                        <p>Sayfaya hayat veren ince ve amaçlı hareketler.</p>
+                    </div>
+                    <div class="mini-card">
+                        <span class="mini-icon">●</span>
+                        <h3>Performans</h3>
+                        <p>Hızlı yüklenen, optimize edilmiş temiz kod.</p>
+                    </div>
+                    <div class="mini-card">
+                        <span class="mini-icon">■</span>
+                        <h3>Erişilebilirlik</h3>
+                        <p>Herkes için kullanılabilir, kapsayıcı deneyimler.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJELER -->
+        <section class="projects" id="projeler">
+            <div class="section-head reveal-up">
+                <p class="eyebrow">// Projeler</p>
+                <h2>Alevlenen fikirler.</h2>
+            </div>
+            <div class="filter-bar reveal-up">
+                <button class="filter-btn active" data-filter="all">Tümü</button>
+                <button class="filter-btn" data-filter="sosyal">Sosyal Medya</button>
+                <button class="filter-btn" data-filter="marka">Marka &amp; Ambalaj</button>
+                <button class="filter-btn" data-filter="video">Video &amp; Animasyon</button>
+            </div>
+            <div class="project-grid">
+
+                <article class="project-card reveal-up" data-cat="sosyal">
+                    <div class="project-media grad-1">
+                        <img src="https://mir-s3-cdn-cf.behance.net/projects/404/6df548246064935.69bb5478edba3.jpg" alt="Social Media Posts" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">
+                        <span class="project-tag">Sosyal Medya</span>
+                    </div>
+                    <div class="project-info">
+                        <h3>Social Media Posts</h3>
+                        <p>Marka sayfaları için hazırlanmış sosyal medya gönderi tasarımları.</p>
+                        <div class="project-links"><a href="https://www.behance.net/gallery/246064935/Social-Media-Posts" target="_blank" rel="noopener">Behance'de Gör →</a></div>
+                    </div>
+                </article>
+
+                <article class="project-card reveal-up" data-cat="sosyal">
+                    <div class="project-media grad-2">
+                        <img src="https://mir-s3-cdn-cf.behance.net/projects/404/915106240086241.Y3JvcCw5NTIsNzQ1LDAsMA.png" alt="Social Media Design" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">
+                        <span class="project-tag">Sosyal Medya</span>
+                    </div>
+                    <div class="project-info">
+                        <h3>Social Media Design</h3>
+                        <p>Farklı markalar için görsel dili güçlü, tutarlı gönderi serileri.</p>
+                        <div class="project-links"><a href="https://www.behance.net/gallery/240086241/Social-Media-Design" target="_blank" rel="noopener">Behance'de Gör →</a></div>
+                    </div>
+                </article>
+
+                <article class="project-card reveal-up" data-cat="sosyal">
+                    <div class="project-media grad-3">
+                        <img src="https://mir-s3-cdn-cf.behance.net/projects/404/b3d043240085963.Y3JvcCwxMDgwLDg0NCwwLDExNw.png" alt="Social Media Design" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">
+                        <span class="project-tag">Sosyal Medya</span>
+                    </div>
+                    <div class="project-info">
+                        <h3>Social Media Design</h3>
+                        <p>Etkileşimi artırmayı hedefleyen renkli, dikkat çekici içerik tasarımları.</p>
+                        <div class="project-links"><a href="https://www.behance.net/gallery/240085963/Social-Media-Design" target="_blank" rel="noopener">Behance'de Gör →</a></div>
+                    </div>
+                </article>
+
+                <article class="project-card reveal-up" data-cat="marka">
+                    <div class="project-media grad-4">
+                        <img src="https://mir-s3-cdn-cf.behance.net/projects/404/132b40245807967.Y3JvcCw3MjcsNTY5LDM5LDM2.png" alt="Product Packaging & Label Design" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">
+                        <span class="project-tag">Marka &amp; Ambalaj</span>
+                    </div>
+                    <div class="project-info">
+                        <h3>Product Packaging &amp; Label Design</h3>
+                        <p>Raf üzerinde öne çıkmayı hedefleyen ürün ambalajı ve etiket tasarımı.</p>
+                        <div class="project-links"><a href="https://www.behance.net/gallery/245807967/Product-Packaging-Label-Design" target="_blank" rel="noopener">Behance'de Gör →</a></div>
+                    </div>
+                </article>
+
+                <article class="project-card reveal-up" data-cat="marka">
+                    <div class="project-media grad-5">
+                        <img src="https://mir-s3-cdn-cf.behance.net/projects/404/bf799c245807119.Y3JvcCw4MDgsNjMyLDAsMg.png" alt="Product Packaging & Label Design" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">
+                        <span class="project-tag">Marka &amp; Ambalaj</span>
+                    </div>
+                    <div class="project-info">
+                        <h3>Product Packaging &amp; Label Design</h3>
+                        <p>Marka kimliğini ambalaj yüzeyine taşıyan ikinci bir ürün serisi.</p>
+                        <div class="project-links"><a href="https://www.behance.net/gallery/245807119/Product-Packaging-Label-Design" target="_blank" rel="noopener">Behance'de Gör →</a></div>
+                    </div>
+                </article>
+
+                <article class="project-card reveal-up" data-cat="marka">
+                    <div class="project-media grad-6">
+                        <img src="https://mir-s3-cdn-cf.behance.net/projects/404/9b4dbd240086811.Y3JvcCw2NDQsNTAzLDg5LDIwOA.png" alt="Window Wrap Design" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">
+                        <span class="project-tag">Marka &amp; Ambalaj</span>
+                    </div>
+                    <div class="project-info">
+                        <h3>Window Wrap Design</h3>
+                        <p>Bir mağaza vitrini için marka odaklı, dikkat çekici cam giydirme tasarımı.</p>
+                        <div class="project-links"><a href="https://www.behance.net/gallery/240086811/Window-Wrap-Design" target="_blank" rel="noopener">Behance'de Gör →</a></div>
+                    </div>
+                </article>
+
+                <article class="project-card reveal-up" data-cat="marka">
+                    <div class="project-media grad-1">
+                        <img src="https://mir-s3-cdn-cf.behance.net/projects/404/122c49232022431.Y3JvcCwxMDA3LDc4OCwxOTcsMA.jpg" alt="Brand Identity & Animated Logo Design" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">
+                        <span class="project-tag">Marka &amp; Ambalaj</span>
+                    </div>
+                    <div class="project-info">
+                        <h3>Brand Identity &amp; Animated Logo Design</h3>
+                        <p>Statik logodan hareketli marka kimliğine uzanan bütünsel bir tasarım çalışması.</p>
+                        <div class="project-links"><a href="https://www.behance.net/gallery/232022431/Brand-Identity-Animated-Logo-Design" target="_blank" rel="noopener">Behance'de Gör →</a></div>
+                    </div>
+                </article>
+
+                <article class="project-card reveal-up" data-cat="video">
+                    <div class="project-media grad-2">
+                        <img src="https://mir-s3-cdn-cf.behance.net/projects/404/ee35ef240086539.Y3JvcCwxMDgwLDg0NCwwLDY0Ng.png" alt="Animation Video" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">
+                        <span class="project-tag">Video &amp; Animasyon</span>
+                    </div>
+                    <div class="project-info">
+                        <h3>Animation Video</h3>
+                        <p>Marka mesajını hareketli görsellerle anlatan kısa animasyon çalışması.</p>
+                        <div class="project-links"><a href="https://www.behance.net/gallery/240086539/Animation-Video" target="_blank" rel="noopener">Behance'de Gör →</a></div>
+                    </div>
+                </article>
+
+                <article class="project-card reveal-up" data-cat="video">
+                    <div class="project-media grad-3">
+                        <img src="https://mir-s3-cdn-cf.behance.net/projects/404/0d6be3240071519.Y3JvcCwxMzgwLDEwODAsMjcwLDA.png" alt="Creative Motion Videos" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">
+                        <span class="project-tag">Video &amp; Animasyon</span>
+                    </div>
+                    <div class="project-info">
+                        <h3>Creative Motion Videos</h3>
+                        <p>Sosyal medya için üretilen, yaratıcı yönü güçlü motion tasarım videoları.</p>
+                        <div class="project-links"><a href="https://www.behance.net/gallery/240071519/Creative-Motion-Videos" target="_blank" rel="noopener">Behance'de Gör →</a></div>
+                    </div>
+                </article>
+
+            </div>
+            <div class="filter-bar reveal-up" style="margin-top:36px; justify-content:center;">
+                <a href="https://www.behance.net/selinates0" target="_blank" rel="noopener" class="btn btn-outline">Behance Profilimin Tamamı →</a>
+            </div>
+        </section>
+
+        <!-- DENEYİM -->
+        <section class="experience" id="deneyim">
+            <div class="section-head reveal-up">
+                <p class="eyebrow">// Deneyim</p>
+                <h2>Yolun buraya kadar geçtiği yerler.</h2>
+            </div>
+            <div class="timeline">
+
+                <div class="timeline-item reveal-left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-date">2024 — Günümüz</span>
+                        <h3>Serbest Front-End Geliştirici</h3>
+                        <p>Küçük işletmeler ve bağımsız markalar için özel tasarım web siteleri geliştiriyorum.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-date">2022 — 2024</span>
+                        <h3>Junior Web Tasarımcı, Kıvılcım Ajans</h3>
+                        <p>Ekip içinde UI/UX tasarımından canlıya alma sürecine kadar tüm aşamalarda görev aldım.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal-left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-date">2021 — 2022</span>
+                        <h3>Front-End Stajyeri</h3>
+                        <p>HTML, CSS ve JavaScript temellerini gerçek projelerde uygulayarak pekiştirdim.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-date">2018 — 2022</span>
+                        <h3>Bilgisayar Programcılığı</h3>
+                        <p>Web teknolojileri ve yazılım geliştirme üzerine eğitim aldım.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- İLETİŞİM -->
+        <section class="contact" id="iletisim">
+            <div class="section-head reveal-up">
+                <p class="eyebrow">// İletişim</p>
+                <h2>Bir kıvılcım çaktıralım mı?</h2>
+                <p class="contact-sub">Projeniz için konuşmaya hazırım. Aşağıdan yazın, en kısa sürede dönüş yapayım.</p>
+            </div>
+            <div class="contact-grid">
+                <form class="contact-form reveal-left" id="contactForm" novalidate>
+                    <div class="form-row">
+                        <label for="name">İsim</label>
+                        <input type="text" id="name" name="name" placeholder="Adınız Soyadınız">
+                        <span class="form-error">Lütfen isminizi girin.</span>
+                    </div>
+                    <div class="form-row">
+                        <label for="email">E-posta</label>
+                        <input type="email" id="email" name="email" placeholder="ornek@eposta.com">
+                        <span class="form-error">Geçerli bir e-posta girin.</span>
+                    </div>
+                    <div class="form-row">
+                        <label for="message">Mesaj</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Projenizden bahsedin..."></textarea>
+                        <span class="form-error">Lütfen bir mesaj yazın.</span>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit">
+                        <span class="btn-text">Mesajı Gönder</span>
+                        <span class="btn-spark"></span>
+                    </button>
+                    <p class="form-success" id="formSuccess">Mesajınız alevlendi 🔥 En kısa sürede dönüş yapacağım!</p>
+                </form>
+                <div class="contact-side reveal-right">
+                    <div class="contact-info-box">
+                        <h3>Doğrudan Ulaşın</h3>
+                        <p><span>E-posta</span>selin.ates@example.com</p>
+                        <p><span>Konum</span>Bursa, Türkiye</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><span>LinkedIn</span></a>
+                        <a href="#" class="social-link"><span>GitHub</span></a>
+                        <a href="#" class="social-link"><span>Instagram</span></a>
+                        <a href="#" class="social-link"><span>Behance</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p class="footer-logo">SELİN<span>ATEŞ</span></p>
+        <p class="footer-tag">2026</p>
+        <button class="back-top" id="backTop" aria-label="Yukarı çık">↑</button>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
