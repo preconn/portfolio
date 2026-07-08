@@ -606,6 +606,10 @@ section {
     justify-content: center;
 }
 
+.about-content {
+    position: relative;
+}
+
 .visual-frame {
     position: relative;
     width: 280px;
@@ -624,6 +628,27 @@ section {
     animation: pulseGlow 3s ease-in-out infinite;
 }
 
+.logo-circle {
+    width: 90px;
+    height: 90px;
+    border: 2px solid #e53935;
+    border-radius: 50%;
+    position: relative;
+}
+
+.logo-s {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 180px;
+    font-weight: 700;
+    color: rgba(229,57,53,.18);
+    line-height: 1;
+    z-index: 2;
+    pointer-events: none;
+}
 @keyframes pulseGlow {
     0%, 100% {
         opacity: 0.6;
